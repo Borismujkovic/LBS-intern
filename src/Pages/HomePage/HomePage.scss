@@ -1,0 +1,35 @@
+body {
+  position: relative;
+}
+
+.main {
+  display: flex;
+
+  .side-bar {
+    height: calc(100vh - 100px);
+    background-color: black;
+    position: fixed;
+    h2 {
+      color: white;
+    }
+    h3 {
+      color: white;
+      cursor: pointer;
+      margin: 10px;
+    }
+    h3:hover{
+        color: orangered;
+    }
+    .our-crew{
+        height: 500px;
+        padding: 20px;
+    }
+  }
+  .cards {
+    display: flex;
+    flex-grow: 1;
+    margin: 20px 200px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
