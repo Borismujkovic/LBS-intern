@@ -18,6 +18,8 @@ const submitDeveloper = () =>{
         body : JSON.stringify(body),
         headers : {'content-type' : 'application/json'}
     })
+    .then(res => res.json())
+    .then(res => props.togglePages())
 }
 
     return <div id='hiring-page'>
