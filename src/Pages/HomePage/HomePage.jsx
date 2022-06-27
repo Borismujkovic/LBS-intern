@@ -5,11 +5,22 @@ import Modal from "../../Components/Modal/Modal";
 import "./HomePage.scss";
 
 const HomePage = (props) => {
+  const [modalData, setModalData] = useState(null)
+
+
+  const selectEmployee = (obj) => {
+    setModalData(obj)
+}
+
   return props.loading ? (
-    <div ><img src="https://media4.giphy.com/media/11ASZtb7vdJagM/200w.webp?cid=ecf05e47qsyexy93f9pa7zweho4dr1p7hgqw0iwuwqq7p48n&rid=200w.webp&ct=g" alt="" /></div>
+    <div className='loading-transparent'>
+      <div classNameloading>
+      <img src="https://media0.giphy.com/media/3y0oCOkdKKRi0/200.webp?cid=ecf05e47jsfa0zc4p1rfvo95qpxmbd9wlbqedf8iv3jp94x2&rid=200.webp&ct=g" alt="" />
+        </div>
+        </div>
   ) : (
     <div>
-      {props.modal && <Modal toggleModal={props.toggleModal} />}
+      {props.modal && <Modal toggleModal={props.toggleModal} modal={modalData}/>}
       <Header togglePages={props.togglePages} />
       <div className="main">
         <div className="side-bar">
@@ -47,7 +58,7 @@ const HomePage = (props) => {
         </div>
         <div className="cards">
           {props.data?.map((e) => (
-            <EmployeeCard data={e} toggleModal={props.toggleModal} />
+            <EmployeeCard data={e} toggleModal={props.toggleModal} selectEmployee={selectEmployee}/>
           ))}
         </div>
       </div>

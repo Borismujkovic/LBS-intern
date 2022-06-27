@@ -2,6 +2,15 @@ body {
   position: relative;
 }
 
+.loading-transparent{
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(68, 68, 68, 0.808);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .main {
   display: flex;
 
