@@ -11,7 +11,7 @@ const EmployeeCard = (props) => {
           props.toggleModal();
           props.selectEmployee(props.data);
         }}>i</button>
-        <div>
+        <div className='profile-details'>
         <img src={props.data.image} alt="" />
         <h1>{props.data.fullName}</h1>
         </div>

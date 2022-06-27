@@ -1,5 +1,8 @@
 body {
   position: relative;
+  background-image: url(https://images.unsplash.com/photo-1546387903-6d82d96ccca6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .loading-transparent{
@@ -16,18 +19,20 @@ body {
 
   .side-bar {
     height: calc(100vh - 100px);
-    background-color: black;
     position: fixed;
     h2 {
-      color: white;
+      color: black;
+      &active{
+        color: red;
+      }
     }
     h3 {
-      color: white;
+      color: black;
       cursor: pointer;
       margin: 10px;
     }
     h3:hover{
-        color: orangered;
+        color: rgb(162 120 36);
     }
     .our-crew{
         height: 500px;
