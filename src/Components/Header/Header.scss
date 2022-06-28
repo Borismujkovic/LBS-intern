@@ -10,7 +10,7 @@
     .hiring-page{
         display: flex;
         align-items: center;
-        button{
+        .button{
             background-color: yellow;
             border: 4px solid black;
             color: black;
@@ -20,6 +20,7 @@
             border-radius: 20px;
             background-color: transparent;
             cursor: pointer;
+            text-decoration: none;
         }
     }
 }

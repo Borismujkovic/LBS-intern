@@ -21,7 +21,7 @@ const HomePage = (props) => {
   ) : (
     <div>
       {props.modal && <Modal toggleModal={props.toggleModal} modal={modalData}/>}
-      <Header togglePages={props.togglePages} />
+      <Header />
       <div className="main">
         <div className="side-bar">
           <div className="our-crew">
@@ -58,7 +58,7 @@ const HomePage = (props) => {
         </div>
         <div className="cards">
           {props.data?.map((e) => (
-            <EmployeeCard data={e} toggleModal={props.toggleModal} selectEmployee={selectEmployee}/>
+            <EmployeeCard data={e} toggleModal={props.toggleModal} selectEmployee={selectEmployee} activateFetch={props.activateFetch}/>
           ))}
         </div>
       </div>

@@ -3,7 +3,6 @@
   margin: 10px;
   width: 400px;
   padding: 5px 10px;
-  max-height: 500px;
   border: 3px solid rgb(162 120 36);
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
   border-radius: 10px;
@@ -12,17 +11,37 @@
   flex-direction: column;
   align-items: center;
   }
-  button {
-    top: 5;
-    right: 0;
-    background-color: rgb(162 120 36);
-    color: white;
+  .buttons{
+display: flex;
+justify-content: space-between;
+flex-direction: row;
+width: 100%;
+    .button {
+      top: 5;
+      right: 0;
+      background-color: rgb(162 120 36);
+      color: white;
     font-weight: 700;
     border: none;
     padding: 8px 13px;
     cursor: pointer;
     border-radius: 10px;
   }
+  .delete-button{
+    top: 5;
+    right: 0;
+    background-color: rgb(162 120 36);
+    color: white;
+  font-weight: 700;
+  border: none;
+  padding: 8px 13px;
+  cursor: pointer;
+  border-radius: 10px;
+  &:hover{
+    background-color: black;
+  }
+  }
+}
   .profile-details{
     img{
       height: 200px;

@@ -11,21 +11,34 @@ const HiringPage = (props) => {
         linkedIn: ''
     })
 
+    const frontend = 'frontend'
+    const backend = 'backend'
 
-const submitDeveloper = () =>{
-    fetch('https://62b47af3da3017eabb0b778e.mockapi.io/backend', {
-        method : 'POST',
-        body : JSON.stringify(body),
-        headers : {'content-type' : 'application/json'}
-    })
-    .then(res => res.json())
-    .then(res => props.togglePages())
-}
+    const submitDeveloper = () =>{
+        fetch(`https://62b47af3da3017eabb0b778e.mockapi.io/frontend`, {
+            method : 'POST',
+            body : JSON.stringify(body),
+            headers : {'content-type' : 'application/json'}
+        })
+        .then(res => res.json())
+        .then(res => props.activateFetch())
+    }
 
     return <div id='hiring-page'>
-        <Header togglePages={props.togglePages}/>
+        <Header/>
         <div className='put'>
             <h1>Join Us!</h1>
+            <div className='formica'>
+                <div className='div-position'>
+
+                <label>
+                    Position:
+                </label>
+                <select name="position" >
+                    <option value={frontend}>frontend</option>
+                    <option value={backend}>backend</option>
+                </select>
+                </div>
         <label>
             Full Name:
             <input onChange={(event) => {
@@ -62,6 +75,7 @@ const submitDeveloper = () =>{
                 setBody({...body, image: event.target.image})
             }} type="text" name="" id='linkedin' placeholder='Picture url'/>
         </label>
+        </div>
             <button onClick={submitDeveloper}>Become Our Employee :)</button>
             </div>
         </div>
